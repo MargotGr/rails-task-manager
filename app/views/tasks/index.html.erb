@@ -1,0 +1,11 @@
+<% @tasks.each do |task| %>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label" for="taskbox" style="text-decoration: none">
+    <%= link_to task.title, task_path(task) %>
+    </label>
+    <%= link_to 🗑, task_path(task)%>
+  </div>
+<% end %>
+
+<%= link_to "add a new task", tasks_new_path %>
